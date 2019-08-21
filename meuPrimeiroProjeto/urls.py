@@ -19,10 +19,12 @@ from .views import hello
 from .views import articles
 from .views import fname
 from .views import fname2
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('hello/', hello),
     path('articles/<int:year>/', articles),
     path('pessoa/<str:nome>/', fname2),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
