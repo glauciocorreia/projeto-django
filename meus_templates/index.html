@@ -1,13 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
   <title>Document</title>
 </head>
 <body>
-  <h1>Olá mundo</h1>
+  <h1 class="home">Olá mundo</h1>
   <p>Meu nome é fulano</p>
+  <img src="{% static 'img/django-logo.gif' %}" alt="">
 </body>
 </html>
